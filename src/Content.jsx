@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { ProductsIndex } from "./ProductsIndex";
 import { ProductsShow } from "./ProductsShow";
 import { Modal } from "./Modal";
+import { Routes, Route } from "react-router-dom";
+import { Signup } from "./Signup";
+import { Login } from "./Login";
 
 export function Content() {
   const [products, setProducts] = useState([]);
@@ -32,6 +35,11 @@ export function Content() {
 
   return (
     <div className="Container">
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+
       <ProductsIndex products={products} onShowProduct={handleShowProduct} />
       <Modal show={isProductsShowVisible} onClose={handleClose}>
         <ProductsShow product={currentProduct} />
