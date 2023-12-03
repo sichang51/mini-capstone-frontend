@@ -1,3 +1,4 @@
+import { LogoutLink } from "./LogoutLink";
 import { Link } from "react-router-dom";
 
 export function Header() {
@@ -25,16 +26,24 @@ export function Header() {
                 Home
               </a>
             </li>
-            <li className="nav-item">
-              <Link to="/signup" className="nav-link" style={{ textDecoration: "none" }}>
-                Signup
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/login" className="nav-link" style={{ textDecoration: "none" }}>
-                Login
-              </Link>
-            </li>
+            {localStorage.jwt === undefined ? (
+              <>
+                <li className="nav-item">
+                  <Link to="/signup" className="nav-link" style={{ textDecoration: "none" }}>
+                    Signup
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/login" className="nav-link" style={{ textDecoration: "none" }}>
+                    Login
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <li className="nav-item">
+                <LogoutLink />
+              </li>
+            )}
           </ul>
         </div>
       </div>
