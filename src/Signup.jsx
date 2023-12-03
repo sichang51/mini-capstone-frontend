@@ -14,6 +14,7 @@ export function Signup() {
       .then((response) => {
         console.log(response.data);
         event.target.reset();
+        localStorage.setItem("flashMessage", "Thank you for signing up.  Your user account has been created.");
         window.location.href = "/"; // Change this to hide a modal, redirect to a specific page, etc.
       })
       .catch((error) => {
