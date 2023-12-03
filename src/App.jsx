@@ -20,6 +20,7 @@ function App() {
         <Header />
         <div onClick={() => setFlashMessage(null)} className="alert alert-success" role="alert">
           {flashMessage}
+          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <Content />
         <Footer />
