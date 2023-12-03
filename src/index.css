@@ -58,9 +58,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.nav-item, .dropdown-item {
-  color: yellow !important;
-}
+
 
 
 @media (prefers-color-scheme: light) {
@@ -74,6 +72,5 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-
 
 }
