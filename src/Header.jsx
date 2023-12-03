@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function Header() {
   return (
-    <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#0d6efd" }} data-bs-theme="dark">
+    <nav className="navbar sticky-top-dark bg-primary" style={{ backgroundColor: "#0d6efd" }} data-bs-theme="dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Navbar
